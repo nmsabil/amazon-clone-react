@@ -34,7 +34,7 @@
 .product > button:hover {
   background-color: #f0c454;
   box-shadow: 0.2px 0.2px 3px #f5c44a;
-  transform: scale(1.05);
+  transform: scale(1.005);
 }
 
 .product__info {
