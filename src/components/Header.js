@@ -4,8 +4,10 @@ import logo from "../img/PinClipart.com_rolling-pin-clip-art_3584545.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
   return (
     <div className='header'>
       <Link to='/'>
@@ -33,7 +35,7 @@ function Header() {
           <div className='header__optionBasket'>
             <ShoppingBasketIcon />
             <span className='header__optionLineTwo header__basketCount'>
-              20
+              {basket.length}
             </span>
           </div>
         </Link>
