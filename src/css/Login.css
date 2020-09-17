@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   height: 100vh;
   background-color: white;
 }
 .login__logo {
   object-fit: contain;
-  width: 100px;
-  margin: 20px auto;
+  width: 150px;
+  margin: 10px auto;
 }
 
 .login__container {
@@ -65,4 +64,17 @@
 .login__registerButton:hover {
   box-shadow: 0.2px 0.2px 3px gray;
   transform: scale(1.005);
+}
+
+.login__password {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.login__forgotPassword {
+  color: #0000ee;
+  font-weight: 400;
+  cursor: pointer;
 }
