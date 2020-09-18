@@ -5,6 +5,15 @@ import "../css/Login.css";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const signin = (e) => {
+    e.preventDefault();
+    // firebase login authentication
+  };
+  const register = (e) => {
+    e.preventDefault();
+    // firebase register, push user to database
+  };
   return (
     <div className='login'>
       <Link to='/'>
@@ -14,7 +23,7 @@ function Login() {
         />
       </Link>
       <div className='login__container'>
-        <h1>Sign in</h1>
+        <h1>Sign In</h1>
         <form>
           <h5>E-Mail</h5>
           <input
@@ -24,17 +33,23 @@ function Login() {
           />
           <div className='login__password'>
             <h5>Password</h5>
-            <h5 className='login__forgotPassword'>Forgot your password?</h5>
+            <h5 className='login__forgotPassword'>Forgot your Password</h5>
           </div>
           <input
             type='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className='login__signInButton'>Sign In</button>
+          <button
+            type='submit'
+            onClick={signin}
+            className='login__signInButton'
+          >
+            Login In{" "}
+          </button>
         </form>
 
-        <button className='login__registerButton'>
+        <button onClick={register} className='login__registerButton'>
           Create your Amazon account
         </button>
       </div>

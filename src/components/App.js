@@ -13,8 +13,13 @@ function App() {
       <div className='app'>
         <Switch>
           <Route path='/login'>
-            <Login />
+            <Login
+              button={"Login"}
+              title={"signin"}
+              forgotPassword='Forgot your password?'
+            />
           </Route>
+
           <Route path='/checkout'>
             <Header />
             <Checkout />
