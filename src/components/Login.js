@@ -60,7 +60,7 @@ function Login() {
             onClick={signin}
             className='login__signInButton'
           >
-            Login In{" "}
+            Log In
           </button>
         </form>
 
